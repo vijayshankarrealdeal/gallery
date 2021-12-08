@@ -1,5 +1,7 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:gallery/photologic.dart/fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 String _temp = """
@@ -73,7 +75,17 @@ class MyListTile extends StatelessWidget {
                 children: [
                   fonts.heading4("My Art Journey", Colors.white),
                   const SizedBox(height: 20),
-                  fonts.body1(_temp, Colors.white),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.45,
+                    child: AutoSizeText(
+                      _temp,
+                      style: GoogleFonts.sourceSansPro(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          letterSpacing: 0.5),
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -10,7 +11,18 @@ import 'package:gallery/routes/contact.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyCVx3TYFXytt9wNjndDN-RJdZWiKqmj1Qo",
+      authDomain: "vsgallery-c1e51.firebaseapp.com",
+      projectId: "vsgallery-c1e51",
+      storageBucket: "vsgallery-c1e51.appspot.com",
+      messagingSenderId: "590266421831",
+      appId: "1:590266421831:web:261df93550a7a17d93d762",
+    ),
+  );
   runApp(const MyApp());
 }
 
