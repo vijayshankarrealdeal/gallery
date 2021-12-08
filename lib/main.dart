@@ -10,7 +10,6 @@ import 'package:gallery/routes/contact.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const _localhost = '0.0.0.0';
 void main() {
   runApp(const MyApp());
 }
